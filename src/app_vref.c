@@ -51,6 +51,6 @@ uint16_t app_stm32_get_vref(const struct device *dev)
     // reference level received and converted from channel get
     // resolution 12bits: 0 to 4095 (uint16)
     vref_uint16 = (uint16_t)(sensor_value_to_milli(&vref_int32));
-    printk("stm32 vbat: %"PRIu16"\n", vref_uint16);
+    printk("stm32 vref: %"PRIu16"\n", vref_uint16);
     return vref_uint16;
 }
