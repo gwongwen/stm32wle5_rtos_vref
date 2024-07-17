@@ -1,0 +1,35 @@
+/*
+ * Copyright (c) 2023
+ * Regis Rousseau
+ * Univ Lyon, INSA Lyon, Inria, CITI, EA3720
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/* VREF internal voltage monitoring */
+/* internal voltage reference of STM32, IN13 */
+/ {
+	stm32_vref: stm32vref {
+    	compatible = "st,stm32-vref";
+		vrefint-cal-addr = <13>;
+		vrefint-cal-mv = <3300>;
+    	status = "okay";
+	};
+};
+
+/* VBAT battery voltage monitoring */
+/* internal ADC channnel of STM32, IN14 */
+/ {
+	stm32_vbat: stm32vbat {
+    	compatible = "st,stm32-vbat";
+    	io-channels = <&adc1 14>;
+   		ratio = <3>;
+    	status = "okay";
+	};
+};
+
+/* enable the corresponding ADC, with the correct vref value (in mV) */
+&adc1 {
+	vref-channel = <13>;
+	vref-mv = <3300>;
+	status = "okay";
+};
