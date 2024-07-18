@@ -12,7 +12,7 @@
     	compatible = "st,stm32-vref";
 		io-channels = <&adc1 13>;
 		vrefint-cal-addr = <13>;
-		vrefint-cal-mv = <3300>;
+		vrefint-cal-mv = <1215>;
     	status = "okay";
 	};
 };
@@ -33,6 +33,6 @@
 &adc1 {
 	vbat-channel = <14>;
 	vref-channel = <13>;
-	vref-mv = <3300>;
+	vref-mv = <1215>;
 	status = "okay";
 };
