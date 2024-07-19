@@ -30,9 +30,10 @@
 };
 
 /* enable the corresponding ADC, with the correct vref value (in mV) */
+/* be careful: vref value changes every day */
 &adc1 {
 	vbat-channel = <14>;
 	vref-channel = <13>;
-	vref-mv = <1215>;
+	vref-mv = <1506>;
 	status = "okay";
 };
