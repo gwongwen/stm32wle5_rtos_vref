@@ -7,7 +7,7 @@
 
 /* VREF internal voltage monitoring */
 /* internal voltage reference of STM32, IN13 - see datasheet pp 42/149 */
-/* be careful: vref value changes every day */
+/* Vrefint = 1212mV typ, see datasheet pp78/149 */
 / {
 	stm32_vref: stm32vref {
     	compatible = "st,stm32-vref";
@@ -35,6 +35,6 @@
 &adc1 {
 	vbat-channel = <14>;
 	vref-channel = <13>;
-	vref-mv = <1550>;
+	vref-mv = <1485>;
 	status = "okay";
 };
