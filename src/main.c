@@ -24,7 +24,7 @@ int main(void)
 
 	while (1) {
 		uint16_t vref = app_stm32_get_vref(vref_dev);
-		uint16_t vbat = app_stm32_get_vbat(vbat_dev);
+		uint16_t vbat = app_stm32_get_vbat(vbat_dev, vref);
 		k_sleep(K_MSEC(2000));
 	}
 	return 0;

@@ -35,6 +35,5 @@
 &adc1 {
 	vbat-channel = <14>;
 	vref-channel = <13>;
-	vref-mv = <1520>;
 	status = "okay";
 };
